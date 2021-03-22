@@ -5,13 +5,15 @@ A social networking service using HTML, CSS (SASS), PHP, MySQL, and JavaScript
 ![My-Friends-img01](https://user-images.githubusercontent.com/75646880/112048703-f93a7580-8b4e-11eb-92c5-7096388c2046.png)
 
 
+
 ![My-Friends-img02](https://user-images.githubusercontent.com/75646880/112048790-1111f980-8b4f-11eb-9f76-a93385482cca.png)
 (for more screens see below)
 
 
+
 Main features of the subpages:
 - index.html - a home page with a video carousel (for large screens) or a hero image (for small screens); the video carousel starts automatically and plays on an infinite loop;
-- why-us.html - a subpage consisting of four boxes: three image &text boxes and a counter box (JavaScript; the counters run once their position is reached, then their values are "freezed" to the target point);
+- why-us.html - a subpage consisting of four boxes: three image & text boxes and a counter box (JavaScript; the counters run once their position is reached, then their values are "freezed" to the target point);
 - browse-friends.php - users accounts overview; the data are imported from a MySQL database (connection via PHP);
 - faq.html - questions & answers (animated in JavaScript);
 - login.php - a subpage used for logging to the website; login can be successful only if the data from the database are used (checked via PHP); the page redirects to a success page, which in turn redirects further to the browse-friends.php page (using PHP & JavaScript);
@@ -21,6 +23,8 @@ Main features of the subpages:
 
 
 INFO: All images & icons, if not otherwise stated, created by @Anna-Portfolio; for notes on the authors of the remaining images/videos, see "authors-credits.txt."
+
+
 
 
 
