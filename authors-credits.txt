@@ -1,0 +1,58 @@
+*** index.html - video carousel ***
+
+Video #1:
+Video by <a href="https://pixabay.com/pl/users/aghyadnajjar-14736497/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=49022">Aghyad Najjar</a> from <a href="https://pixabay.com/pl/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=49022">Pixabay</a>
+
+
+Video #2:
+Video by <a href="https://pixabay.com/pl/users/distillvideos-1280814/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=40">DistillVideos</a> from <a href="https://pixabay.com/pl/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=40">Pixabay</a>
+
+
+Video #3:
+Video by <a href="https://pixabay.com/pl/users/mastervideoshar-16977974/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=51343">Владимир Пожидаев</a> from <a href="https://pixabay.com/pl/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=51343">Pixabay</a>
+
+
+
+
+*** index.html - hero image for small screens ***
+
+Image #1 (cropped):
+Photo by <a href="https://pixabay.com/pl/users/stocksnap-894430/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2561053"> StockSnap</a> z <a href="https://pixabay.com/pl/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2561053"> Pixabay</a>
+
+
+
+
+*** why-us.html - background images ***
+
+
+Image #1 (cropped):
+Photo by <a href="https://pixabay.com/pl/users/3194556-3194556/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1718244"> Karen Warfel</a> z <a href="https://pixabay.com/pl/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1718244"> Pixabay</a>
+
+
+Image #2 (cropped):
+Photo by <a href="https://unsplash.com/@jfollis613?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Justin Follis</a> on <a href="/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+
+Image #3:
+Photo by <a href="https://pixabay.com/pl/users/fancycrave1-1115284/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=821624"> fancycrave1</a> z <a href="https://pixabay.com/pl/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=821624"> Pixabay</a>
+
+
+
+
+*** browse-friends.php + mf_database ***
+
+
+user #1 (cropped):
+Photo by <a href="https://pixabay.com/pl/users/5688709-5688709/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2425121"> 5688709</a> z <a href="https://pixabay.com/pl/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2425121"> Pixabay</a>
+
+
+user #3 (cropped):
+Photo by <a href="https://pixabay.com/pl/users/trevoykellyphotography-7814005/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3104635"> TréVoy Kelly</a> z <a href="https://pixabay.com/pl/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3104635"> Pixabay</a>
+
+
+user #4:
+Photo by <a href="https://pixabay.com/pl/users/sahinsezerdincer-3926228/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4946488"> Şahin Sezer Dinçer</a> z <a href="https://pixabay.com/pl/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4946488"> Pixabay</a>
+
+
+user #5:
+Photo by <a href="https://pixabay.com/pl/users/agnessatalalaev0-1268070/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1354025"> agnessatalalaev0</a> z <a href="https://pixabay.com/pl/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1354025"> Pixabay</a>
