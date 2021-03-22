@@ -1,0 +1,78 @@
+#faq-body * {
+    overflow-x: hidden;
+}
+.faq-container {
+    width: 100%;
+    position: absolute;
+    height: auto;
+    margin-top: 17vh;
+
+    &__section {
+        @include flex-center(column);
+        align-items: center;
+        margin-bottom: 40vh;
+
+        &__header {
+            h1 {
+                font-size: size(large-xl);
+                font-weight: weight(bold);
+                padding-bottom: 5vh;
+            }
+        }
+
+        &__accordion {
+            width: 50vw;
+            text-align: left;
+
+            &__item {
+                &__title {
+                    @include flex-center(row);
+                    width: 100%;
+                    height: auto;
+                    padding: 2vh 3vw;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: size(large);
+                    font-weight: weight(bold);
+                    background-color: $background-secondary-color;
+                    border: 3px solid rgb(180, 180, 180);
+                    border-radius: 5px;
+                    z-index: 1;
+                }
+                &__title:hover {
+                    cursor: pointer;
+                }
+                &__image {
+                    content: "";
+                    height: 1rem;
+                    width: 1.8rem;
+                    background-size: cover;
+                    background-image: url("images/icons/accordion-tick.png");
+                    background-position: bottom;
+                    background-repeat: no-repeat;
+                }
+
+                .image-upside-down {
+                    content: "";
+                    height: 1rem;
+                    width: 1.8rem;
+                    background-size: cover;
+                    background-image: url("images/icons/accordion-tick.png");
+                    background-position: bottom;
+                    background-repeat: no-repeat;
+                    transform: rotate(180deg);
+                }
+
+                &__content {
+                    position: relative;
+                    padding: 3vh 2vw 5vh 2vw;
+                    background-color: $background-secondary-color;
+                    border: 3px solid rgb(180, 180, 180);
+                    border-radius: 5px;
+                    z-index: -1;
+                    display: none;
+                }
+            }
+        }
+    }
+}

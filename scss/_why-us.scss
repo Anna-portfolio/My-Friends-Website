@@ -1,0 +1,72 @@
+.why-us-container {
+    @include flex-center(column);
+    position: absolute;
+}
+
+.why-us-container__section {
+    @include transition-ease;
+    width: 100%;
+    height: 120vh;
+    animation: fadeIn 1s ease-in-out;
+
+    &__img-01 {
+        @include why-us-img;
+        background-image: url("images/why-us/why-us_01.jpg");
+    }
+    &__img-02 {
+        @include why-us-img;
+        background-image: url("images/why-us/why-us_02.jpg");
+    }
+    &__img-03 {
+        @include why-us-img;
+        background-image: url("images/why-us/why-us_03.jpg");
+    }
+
+    &__text {
+        @include text-container;
+    }
+    h1 {
+        @include heading-style;
+    }
+    p {
+        @include para-style;
+    }
+}
+
+.counter-container {
+    @include flex-center(row);
+    background: $background-primary-color;
+    height: 100%;
+
+    div {
+        @include flex-center(column);
+        padding: 5vw;
+        margin-top: 20vh;
+        align-items: center;
+    }
+
+    &__counter {
+        height: $counter-standard;
+        width: $counter-standard;
+        margin-bottom: 1rem;
+        text-align: center;
+        line-height: $counter-standard - 2vh;
+        background: $background-dark;
+        color: map-get($font-colors, standard-light);
+        font-size: size(hero);
+        font-weight: weight(bold);
+        border: 5px solid $background-secondary-color;
+        border-radius: 50%;
+    }
+    h3 {
+        font-size: size(large-xxl);
+    }
+}
+.mail {
+    text-decoration: none;
+    color: map-get($font-colors, standard-light);
+}
+.mail:hover {
+    text-decoration: underline;
+    color: map-get($font-colors, green-light);
+}

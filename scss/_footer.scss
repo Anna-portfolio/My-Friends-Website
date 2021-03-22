@@ -1,0 +1,33 @@
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    background: $background-footer;
+    color: map-get($font-colors, standard-light);
+    font-size: size(small);
+
+    li a {
+        text-decoration: none;
+        color: map-get($font-colors, standard-light);
+    }
+
+    a:hover {
+        color: map-get($font-colors, green-light);
+    }
+}
+.footer-container p {
+    margin: 10px 0 0 0;
+}
+.footer-container div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10vw;
+}
+.footer-container ul {
+    padding: 0 0 0 5px;
+    list-style: none;
+}

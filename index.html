@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Friends | Find new friends on My Friends! Meet people with the same areas of interest as yours! Over 1.000.000 satisfied users, more than 250.000 online meetings in total">
+    <meta name="keywords" content="My, Friends, community, user, profiles, SASS">
+    <meta name="author" content="@Anna-portfolio">
+    <link rel="icon" href="images/logo/my-friends-icon.png" sizes="16x16">
+    <script src="js/hero-carousel.js" defer></script>
+    <script src="js/burger-nav.js" defer></script>
+    <script src="https://kit.fontawesome.com/c94e259708.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>My Friends | Meet new people on My Friends!</title>
+</head>
+<body>
+    <header>
+        <nav id="nav-main">
+            <a href="index.html">
+                <img src="images/logo/my-friends-logo.png">
+            </a>
+            <ul id="nav-list">
+                <li class="nav-list__item">
+                    <a href="index.html" class="nav-list__link active">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-list__item">
+                    <a href="why-us.html" class="nav-list__link">
+                        Why Us?
+                    </a>
+                </li>
+                <li class="nav-list__item">
+                    <a href="browse-friends.php" class="nav-list__link">
+                        Browse Friends
+                    </a>
+                </li>
+                <li class="nav-list__item">
+                    <a href="faq.html" class="nav-list__link">
+                        FAQ
+                    </a>
+                </li>
+                <li class="nav-list__item">
+                    <a href="login.php" class="nav-list__user">
+                        Sign In
+                    </a>
+                </li>
+            </ul>
+            <div id="burger" onclick="burgerMenu()">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="hero-container">
+            <div id="hero-container__video">
+                <video id="vid-01" class="hero-video" muted>
+                    <source src="videos/hero-video01.mp4">
+                </video>
+                <video id="vid-02" class="hero-video"  muted>
+                    <source src="videos/hero-video02.mp4">
+                </video>
+                <video id="vid-03" class="hero-video" muted>
+                        <source src="videos/hero-video03.mp4">
+                </video>
+            </div>
+            <div id="hero-container__image"></div>
+            <a href="why-us.html">
+                <div id="hero-container__overlay">
+                    <h1>Join My Friends<br>and meet new people today!</h1>
+                </div>
+            </a>
+        </section>   
+    </main>
+</body>
+</html>

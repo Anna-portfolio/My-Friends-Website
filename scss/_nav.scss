@@ -1,0 +1,91 @@
+nav {
+    @include flex-center(row);
+}
+
+nav img {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    left: 0;
+    margin: 15px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+#nav-main {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    min-height: 10vh;
+    top: 0;
+    left: 0;
+    background: $background-secondary-color;
+    z-index: 1;
+}
+#nav-list {
+    @include flex-center(row);
+    list-style-type: none;
+    width: 100%;
+    margin-left: 32vw;
+}
+.nav-list__item {
+    margin: 1.2rem 2.5rem;
+    scroll-behavior: none;
+
+    a {
+        text-decoration: none;
+        line-height: 180%;
+        color: map-get($font-colors, standard-dark);
+        font-size: size(small);
+        word-spacing: 4px;
+        letter-spacing: 0.5px;
+
+        &::after {
+            @include transition-ease;
+            content: "";
+            display: block;
+            bottom: 0;
+            width: 100%;
+            background-color: $spec-elements;
+            height: 1.5px;
+            border-radius: 0.5px;
+            visibility: hidden;
+            transform: scaleX(0);
+        }
+        &:hover::after {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+    }
+}
+
+//sign in
+.nav-list__user {
+    @include transition-ease;
+    font-weight: weight(bold);
+    color: map-get($font-colors, green-dark);
+    left: 5vw;
+    word-spacing: 5px;
+    letter-spacing: 0.5px;
+}
+
+//burger
+#burger {
+    overflow: hidden;
+    display: block;
+    position: fixed;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+    opacity: 0;
+}
+#burger div {
+    width: 30px;
+    height: 3px;
+    background-color: $background-dark;
+    margin: 5px;
+    border: 3px solid $spec-elements;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}

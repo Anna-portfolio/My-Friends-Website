@@ -1,0 +1,72 @@
+.browse-container {
+    position: absolute;
+    width: 100%;
+    background: $background-primary-color;
+    height: 90vh;
+    top: 10vh;
+    scroll-behavior: none;
+
+    &__header {
+        @include flex-center(column);
+        margin: 1rem 0;
+
+        a {
+            text-decoration: none;
+            color: map-get($font-colors, standard-dark);
+        }
+
+        a:hover {
+            color: map-get($font-colors, green-dark);
+        }
+    }
+
+    &__section {
+        display: grid;
+        width: 100%;
+        margin-bottom: 20vh;
+        justify-content: center;
+        align-items: center;
+        column-gap: 5rem;
+        row-gap: 2rem;
+        grid-template-columns: repeat(3, 15rem);
+        grid-template-rows: repeat(2, 15rem);
+
+        &__user,
+        &__user__invite,
+        &__user__contact {
+            @include flex-center(column);
+            @include transition-ease;
+            height: $friend-standard;
+            width: $friend-standard;
+            padding: 0.5rem;
+            background: $background-secondary-color;
+            border-radius: 20%;
+            border: 7px dashed $spec-elements;
+
+            &__user-data img {
+                height: 17vh;
+                width: 17vh;
+                border-radius: 50%;
+            }
+        }
+        &__user:hover {
+            cursor: pointer;
+        }
+
+        &__user__invite:hover {
+            background: $background-dark;
+            color: map-get($font-colors, standard-light);
+
+            h3,
+            h5 {
+                transform: scale(1.2);
+                font-weight: weight(bold);
+            }
+        }
+    }
+}
+
+.register {
+    text-decoration: none;
+    color: map-get($font-colors, standard-dark);
+}

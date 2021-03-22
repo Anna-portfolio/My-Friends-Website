@@ -1,0 +1,32 @@
+#hero-container__video video {
+    @include flex-center(row);
+    width: 100%;
+    top: 10vh;
+    position: fixed;
+}
+#hero-container__image {
+    @include hero-img;
+    background-image: url("images/hero-media-screen/hero-media-screen.jpg");
+    display: none;
+}
+#hero-container__overlay {
+    width: 100%;
+    height: 90vh;
+    top: 10vh;
+    background: rgba($background-hero, 0.4);
+    position: fixed;
+
+    h1 {
+        @include hero-text;
+        color: map-get($font-colors, standard-light);
+        font-size: size(hero);
+        bottom: 10vh;
+    }
+}
+
+.hero-video {
+    visibility: hidden;
+}
+.hero-active {
+    visibility: visible;
+}

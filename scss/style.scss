@@ -1,0 +1,30 @@
+@import "config";
+@import "nav";
+@import "footer";
+@import "hero";
+@import "why-us";
+@import "browse";
+@import "faq";
+@import "login";
+@import "responsive";
+
+body {
+    background-color: $background-primary-color;
+    font-size: weight(bold);
+}
+.social-icons {
+    @include flex-center(column);
+    position: fixed;
+    right: 1.7rem;
+    z-index: 1;
+    bottom: 1rem;
+
+    i {
+        @include transition-ease;
+        color: $spec-elements;
+
+        &:hover {
+            color: $background-secondary-color;
+        }
+    }
+}
