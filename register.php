@@ -10,80 +10,80 @@
     //configure the form
     if(isset($_POST['submit'])){
 		
-		if(empty($_POST['email'])){
-			$errors['email'] = 'An email is required';
-		} else {
-			$email = $_POST['email'];
-			if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-				$errors['email'] = 'Email must be valid';
-			}
+	if(empty($_POST['email'])){
+		$errors['email'] = 'An email is required';
+	} else {
+		$email = $_POST['email'];
+		if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+			$errors['email'] = 'Email must be valid';
 		}
+	}
 
         if((empty($_POST['password'])) or (strlen($_POST['password']) < 8)){
-			$errors['password'] = 'Password must be at least 8 characters long';
-		} else {
-			$password = $_POST['password'];
-			if(!preg_match('/^[a-zA-Z0-9!?@#$]+$/', $password)){
-				$errors['password'] = 'Only letters, numbers and special chars: !?@#$';
-			}
+		$errors['password'] = 'Password must be at least 8 characters long';
+	} else {
+		$password = $_POST['password'];
+		if(!preg_match('/^[a-zA-Z0-9!?@#$]+$/', $password)){
+		$errors['password'] = 'Only letters, numbers and special chars: !?@#$';
 		}
+	}
 
-		if(empty($_POST['first-name'])){
-			$errors['first-name'] = 'First name is required';
-		} else {
-			$firstName = $_POST['first-name'];
-			if(!preg_match('/^[a-zA-Z]+$/', $firstName)){
-				$errors['first-name\s'] = 'First name must be letters and spaces only';
-			}
+	if(empty($_POST['first-name'])){
+		$errors['first-name'] = 'First name is required';
+	} else {
+		$firstName = $_POST['first-name'];
+		if(!preg_match('/^[a-zA-Z]+$/', $firstName)){
+			$errors['first-name\s'] = 'First name must be letters and spaces only';
 		}
+	}
 
-		if(empty($_POST['last-name'])){
-			$errors['last-name'] = 'Last name is required';
-		} else {
-			$lastName = $_POST['last-name'];
-			if(!preg_match('/^[a-zA-Z\s]+$/', $lastName)){
-				$errors['last-name'] = 'Last name must be letters and spaces only';
-			}
+	if(empty($_POST['last-name'])){
+		$errors['last-name'] = 'Last name is required';
+	} else {
+		$lastName = $_POST['last-name'];
+		if(!preg_match('/^[a-zA-Z\s]+$/', $lastName)){
+			$errors['last-name'] = 'Last name must be letters and spaces only';
 		}
+	}
 
-		if(empty($_POST['age'])){
-		    $errors['age'] = '';
-		} else {
-			$age = $_POST['age'];
-			if(!is_numeric($age)){
-				$errors['age'] = 'Must be numbers only (max length: 3)';
-			}
-            if($age < 18){
-				$errors['age'] = 'You must be at least 18 to register';
-			}
+	if(empty($_POST['age'])){
+		   $errors['age'] = '';
+	} else {
+		$age = $_POST['age'];
+		if(!is_numeric($age)){
+			$errors['age'] = 'Must be numbers only (max length: 3)';
 		}
+            	if($age < 18){
+			$errors['age'] = 'You must be at least 18 to register';
+		}
+	}
 
-		if(empty($_POST['city'])){
-			$errors['city'] = 'City is required';
-		} else {
-			$city = $_POST['city'];
-			if(!preg_match('/^[a-zA-Z\s]+$/', $city)){
-				$errors['city'] = 'City must be letters and spaces only';
-			}
+	if(empty($_POST['city'])){
+		$errors['city'] = 'City is required';
+	} else {
+		$city = $_POST['city'];
+		if(!preg_match('/^[a-zA-Z\s]+$/', $city)){
+			$errors['city'] = 'City must be letters and spaces only';
 		}
+	}
 
-		if(empty($_POST['country'])){
-			$errors['country'] = 'Country is required';
-		} else {
-			$country = $_POST['country'];
-			if(!preg_match('/^[a-zA-Z\s]+$/', $country)){
-				$errors['country'] = 'Country must be letters and spaces only';
-			}
+	if(empty($_POST['country'])){
+		$errors['country'] = 'Country is required';
+	} else {
+		$country = $_POST['country'];
+		if(!preg_match('/^[a-zA-Z\s]+$/', $country)){
+			$errors['country'] = 'Country must be letters and spaces only';
 		}
+	}
 
-		if(empty($_POST['phone'])){
-		    $errors['phone'] = '';
-		} else {
-			$phone = $_POST['phone'];
-			if(!is_numeric($phone)){
-				$errors['phone'] = 'Must be numbers only (max length: 10)';
-			}
+	if(empty($_POST['phone'])){
+		   $errors['phone'] = '';
+	} else {
+		$phone = $_POST['phone'];
+		if(!is_numeric($phone)){
+			$errors['phone'] = 'Must be numbers only (max length: 10)';
 		}
+	}
 
         if(empty($_POST['captcha'])){
 			$errors['captcha'] = 'This field is required';
@@ -111,7 +111,7 @@
 		if(!array_filter($errors)){
 			
 			// escape the SQL characters
-            $avatar = mysqli_real_escape_string($conn, 'images/users/' . $img);
+            		$avatar = mysqli_real_escape_string($conn, 'images/users/' . $img);
 			$email = mysqli_real_escape_string($conn, $_POST['email']);
 			$password = mysqli_real_escape_string($conn, $_POST['password']);
 			$firstName = mysqli_real_escape_string($conn, $_POST['first-name']);
