@@ -4,11 +4,11 @@
     include('db_config/db_connect.php');
 
     //define variables and errors array
-	$email = $password = $firstName = $lastName = $age = $city = $country = $phone = $avatar = $captcha = $terms = '' ;
-	$errors = array('email' => '', 'password' => '', 'first-name' => '', 'last-name' => '', 'age' => '', 'city' => '', 'country' => '', 'phone' => '', 'avatar' => '', 'captcha' => '', 'terms' => '');
+    $email = $password = $firstName = $lastName = $age = $city = $country = $phone = $avatar = $captcha = $terms = '' ;
+    $errors = array('email' => '', 'password' => '', 'first-name' => '', 'last-name' => '', 'age' => '', 'city' => '', 'country' => '', 'phone' => '', 'avatar' => '', 'captcha' => '', 'terms' => '');
 
     //configure the form
-	if(isset($_POST['submit'])){
+    if(isset($_POST['submit'])){
 		
 		if(empty($_POST['email'])){
 			$errors['email'] = 'An email is required';
@@ -24,7 +24,7 @@
 		} else {
 			$password = $_POST['password'];
 			if(!preg_match('/^[a-zA-Z0-9!?@#$]+$/', $password)){
-				$errors['password'] = 'Only etters, numbers and special chars: !?@#$';
+				$errors['password'] = 'Only letters, numbers and special chars: !?@#$';
 			}
 		}
 
@@ -46,9 +46,9 @@
 			}
 		}
 
-        if(empty($_POST['age'])){
-            $errors['age'] = '';
-        } else {
+		if(empty($_POST['age'])){
+		    $errors['age'] = '';
+		} else {
 			$age = $_POST['age'];
 			if(!is_numeric($age)){
 				$errors['age'] = 'Must be numbers only (max length: 3)';
@@ -67,7 +67,7 @@
 			}
 		}
 
-        if(empty($_POST['country'])){
+		if(empty($_POST['country'])){
 			$errors['country'] = 'Country is required';
 		} else {
 			$country = $_POST['country'];
@@ -76,9 +76,9 @@
 			}
 		}
 
-        if(empty($_POST['phone'])){
-            $errors['phone'] = '';
-        } else {
+		if(empty($_POST['phone'])){
+		    $errors['phone'] = '';
+		} else {
 			$phone = $_POST['phone'];
 			if(!is_numeric($phone)){
 				$errors['phone'] = 'Must be numbers only (max length: 10)';
@@ -101,12 +101,12 @@
 		 	};
 		}
 
-        // //save the uploaded image to a variable
-        $img = $_FILES['avatar']['name'];
+		// //save the uploaded image to a variable
+		$img = $_FILES['avatar']['name'];
 
-        if($img == FALSE){
-            $img = 'user-default.png';
-        }
+		if(!$img){
+		    $img = 'user-default.png';
+		}
     
 		if(!array_filter($errors)){
 			
@@ -121,23 +121,21 @@
 			$country = mysqli_real_escape_string($conn, $_POST['country']);
 			$phone = mysqli_real_escape_string($conn, $_POST['phone']);
 
-
-			// create a new SQL row
-			$sql = "INSERT INTO users(avatar, email, password, first_name, last_name, age, city, country, phone) VALUES('$avatar', '$email','$password','$firstName', '$lastName', '$age', '$city', '$country', '$phone')";
-
-            //save to the database and check if it's saved successfuly
-			if(mysqli_query($conn, $sql)){
-				// success
-                move_uploaded_file($_FILES['avatar']['tmp_name'], "images/users/$img");
-				header('Location: register-success.php');
+			// use a prepared statement to prevent SQL injection
+			$sql = "INSERT INTO users(avatar, email, password, first_name, last_name, age, city, country, phone) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            
+			$stmt = mysqli_stmt_init($conn);
+			
+			if(!mysqli_stmt_prepare($stmt, $sql)){
+				echo "SQL error";
 			} else {
-                //error
-				echo 'query error: '. mysqli_error($conn);
+				mysqli_stmt_bind_param($stmt, "sssssssss", $avatar, $email, $password, $firstName, $lastName, $age, $city, $country, $phone);
+				mysqli_stmt_execute($stmt);
+				move_uploaded_file($_FILES['avatar']['tmp_name'], "images/users/$img");
+				header('Location: register-success.php');
 			}
-
 		}
 	}
-
 ?>
 
 
